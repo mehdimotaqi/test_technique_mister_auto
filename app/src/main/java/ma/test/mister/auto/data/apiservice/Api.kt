@@ -29,26 +29,6 @@ interface Api {
     companion object {
         operator fun invoke(): Api {
 
-            //10 MB
-            //val cacheSize = (5 * 1024 * 1024).toLong()
-            //val myCache = Cache(c.cacheDir, cacheSize)
-
-            /*
-            .addInterceptor { chain ->
-                    var request = chain.request()
-                    request = if (hasNetwork(c)!!)
-                        request.newBuilder().header("Cache-Control", "public, max-age=" + 120).build()
-                    else
-                        request.newBuilder().header(
-                            "Cache-Control",
-                            "public, only-if-cached, max-stale=" + 60 * 60 * 24 * 7
-                        ).build()
-
-                    chain.proceed(request)
-                }
-             */
-
-
             val okHttpClient = OkHttpClient.Builder()
                 .build()
 
